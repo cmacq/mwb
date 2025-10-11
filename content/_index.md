@@ -10,7 +10,7 @@ sections:
       title: |
         Metro Warbirds
       image:
-        filename: welcome.jpg
+        filename: mwb-logo.png
       text: |
         <br>
         
