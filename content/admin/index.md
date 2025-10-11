@@ -5,5 +5,5 @@ private: true
 outputs:
   - decap_cms_config
   - HTML
-draft = true
+draft: true
 ---
