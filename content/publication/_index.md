@@ -8,4 +8,5 @@ view: citation
 banner:
   caption: ''
   image: ''
+draft: true
 ---

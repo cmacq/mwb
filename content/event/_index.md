@@ -8,5 +8,5 @@ view: compact
 banner:
   caption: ''
   image: ''
-draft = true
+draft: true
 ---
