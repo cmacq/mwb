@@ -40,7 +40,7 @@ sections:
       title:
       subtitle: ''
       text: |
-        Checkout the <a href=https://myearthcam.com/11llrunway>runway cam livestream courtesy of EarthCam</a>
+        Checkout the <a href=https://myearthcam.com/11llrunway>runway cam livestream courtesy of EarthCam</a><img src="https://www.earthcam.com/images/site/linktous/EarthCam_webcam_technology_150.png" alt="EarthCam webcam technology">
     design:
       columns: '1'
       background:
