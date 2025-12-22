@@ -35,35 +35,35 @@ sections:
   #     view: card
   #     columns: '1'
   
-  # - block: markdown
-  #   content:
-  #     title:
-  #     subtitle: ''
-  #     text: |
-<div style="max-width: 900px; margin: 0 auto;">
+  - block: markdown
+    content:
+      title:
+      subtitle: ''
+      text: |
+        <div : 900px; margin: 0 auto;">
           <iframe
             width="100%"
             height="480"
-            src="https://www.youtube.com/embed/live_stream?channel=UCa6fy2ecDwDnkCe1aRyYkUA&autoplay=1&mute=1"
+src="https://www.youtube.com/embed/live_stream?channel=UCa6fy2ecDwDnkCe1aRyYkUA&autoplay=1&mute=1"
             allow="autoplay; encrypted-media; picture-in-picture"
             frameborder="0"
             allowfullscreen>
           </iframe>
         </div>
-  #   design:
-  #     columns: '1'
-  #     background:
-  #       image: 
-  #         filename: coders.jpg
-  #         filters:
-  #           brightness: 1
-  #         parallax: false
-  #         position: center
-  #         size: cover
-  #         text_color_light: true
-  #     spacing:
-  #       padding: ['20px', '0', '20px', '0']
-  #     css_class: fullscreen
+    design:
+      columns: '1'
+      background:
+        image: 
+          filename: coders.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      spacing:
+        padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
 
   # - block: collection
   #   content:
