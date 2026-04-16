@@ -5,31 +5,35 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: contact
+  - block: markdown
     content:
       title: Contact
+      subtitle: ''
       text: |-
         Let us know your interest in Metro Warbirds!
-      email: billthacker@gmail.com
-      
-      # Automatically link email and phone or display as text?
-      autolink: true
-      
-      contact_links:
-        - icon: map-marker
-          icon_pack: fas
-          name: Metrowarbirds HQ - 11LL
-          link: 'https://adip.faa.gov/agis/public/#/simpleAirportMap/11LL'
-    
-      # Email form provider
-      form:
-        provider: netlify
-        formspree:
-          id:
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: true
-        name: contact
+        
+        <form action="https://usebasin.com/f/cfe9afc7f1f1" method="POST" enctype="multipart/form-data" id="form">
+          <div style="margin-bottom: 15px;">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" style="width: 100%; padding: 8px; margin-top: 5px;" />
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px;" />
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <label for="message">Message</label><br>
+            <textarea name="message" style="width: 100%; padding: 8px; margin-top: 5px; min-height: 150px;"></textarea>
+          </div>
+          
+          <button type="submit" style="padding: 10px 20px; background-color: #1f77b4; color: white; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+        </form>
+        
+        **Location:** [Metrowarbirds HQ - 11LL](https://adip.faa.gov/agis/public/#/simpleAirportMap/11LL)
+        
+        **Email:** billthacker@gmail.com
     design:
       columns: '1'
 
