@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Metro Warbirds # Website name
-baseURL: 'https://cmacq.github.io/mwb/' # Website URL
+baseURL: 'https://metrowarbirds.com/' # Website URL
 
 ############################
 ## LANGUAGE
