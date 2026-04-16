@@ -16,6 +16,20 @@ sections:
       spacing:
         padding: ['20px', '0', '20px', '0']
 
+  - block: markdown
+    content:
+      title: Airport Weather
+      subtitle: ''
+      text: |
+        <div id="kpnt-weather" style="text-align: center;">
+          <p>Loading weather data...</p>
+        </div>
+        <script src="/js/weather.js"></script>
+    design:
+      columns: '1'
+      spacing:
+        padding: ['20px', '0', '20px', '0']
+
   - block: hero
     content:
       title: |
