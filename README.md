@@ -1,48 +1,162 @@
-# [Hugo Research Group Theme](https://github.com/wowchemy/starter-hugo-research-group)
+# Metro Warbirds Website
 
-[![Screenshot](preview.png)](https://hugoblox.com/hugo-themes/)
+Official website for Metro Warbirds - A group of aviation enthusiasts that have been meeting at EAA AirVenture in Oshkosh, Wisconsin every July since 1983.
 
-The **Research Group Template** empowers your research group to easily create a beautiful website with a stunning homepage, news, academic publications, events, team profiles, and a contact form.
+**Website:** https://metrowarbirds.com
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+## Project Technologies
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
+This website is built with:
+- **Hugo** - Static site generator
+- **Hugo Blox** - Wowchemy theme and page builder
+- **GitHub Pages** - Hosting and deployment (with custom domain)
+- **Basin** - Contact form submissions (usebasin.com)
+- **EarthCam** - Live runway camera streaming
+- **Aviation Weather API** - Real-time METAR/TAF data for KPNT airport
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+## Features
 
-[Check out the latest demo](https://research-group.netlify.app/) of what you'll get in less than 60 seconds, or [view the showcase](https://hugoblox.com/creators/).
+- Live runway camera feed from EarthCam
+- Real-time airport weather (METAR/TAF) for KPNT (Pontiac Airport)
+- Contact form with Basin integration
+- Responsive design with dark/light theme support
+- Search functionality across site content
+- Custom domain (metrowarbirds.com) via GitHub Pages
 
-The integrated [**Wowchemy**](https://hugoblox.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+## Getting Started
 
-- 👉 [**Get Started**](https://hugoblox.com/hugo-themes/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Wowchemy research community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- ⬇️ **Automatically import citations from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 🐦 Share your new site with the community: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- 🗳 [Take the survey and help us improve #OpenSource](https://forms.gle/NioD9VhUg7PNmdCAA)
-- 🚀 [Contribute improvements](https://github.com/HugoBlox/hugo-blox-builder/blob/main/CONTRIBUTING.md) or [suggest improvements](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/hugo-tutorials/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+### Prerequisites
 
-## We ask you, humbly, to support this open source movement
+- [Hugo Extended](https://gohugo.io/installation/) (v0.135.0 or later)
+- [Git](https://git-scm.com/)
 
-Today we ask you to defend the open source independence of the Wowchemy website builder and themes 🐧
+### Installation
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/cmacq/mwb.git
+   cd mwb
+   ```
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+2. **Download Hugo theme modules:**
+   ```bash
+   hugo mod get -u
+   ```
 
-## Demo credits
+3. **Build the site:**
+   ```bash
+   hugo
+   ```
 
-Please replace the demo images with your own.
+4. **View locally (development server):**
+   ```bash
+   hugo server
+   ```
+   The site will be available at `http://localhost:1313`
 
-- [Female scientist](https://unsplash.com/photos/uVnRa6mOLOM)
-- [2 Coders](https://unsplash.com/photos/kwzWjTnDPLk)
-- [Cafe](https://unsplash.com/photos/RnDGGnMEOao)
-- Blog posts
-  - https://unsplash.com/photos/AndE50aaHn4
-  - https://unsplash.com/photos/OYzbqk2y26c
-- Avatars
-  - https://unsplash.com/photos/5yENNRbbat4
-  - https://unsplash.com/photos/WNoLnJo7tS8
+### File Structure
+
+- `content/` - Website pages and content (Markdown files)
+- `config/_default/` - Hugo configuration files (hugo.yaml, params.yaml, etc.)
+- `static/` - Static assets (JavaScript, images)
+- `static/js/weather.js` - Weather data fetching script
+- `public/` - Generated static site (created by Hugo build)
+
+## Configuration
+
+### Contact Form Setup
+
+The contact form uses **Basin** for form submissions:
+- Form endpoint: `https://usebasin.com/f/cfe9afc7f1f1`
+- Contact form file: `content/contact/index.md`
+- Submissions are redirected to `/thank-you/` page after submission
+- Basin receives all contact submissions and can route them via email
+
+To update the contact form ID, modify the form action in `content/contact/index.md`.
+
+### Weather Display
+
+The homepage includes live METAR weather data for KPNT airport:
+- Script location: `static/js/weather.js`
+- Updates every 15 minutes automatically
+- Data source: Aviation Weather API (aviationweather.gov)
+- Displays current conditions on the homepage
+
+### Search Configuration
+
+Site search uses the default Wowchemy provider:
+- Configuration: `config/_default/params.yaml` (search provider settings)
+- Index: `public/index.json` (auto-generated by Hugo)
+- Re-index by rebuilding: `hugo`
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+1. **Make your changes locally**
+2. **Build the site:**
+   ```bash
+   hugo
+   ```
+3. **Commit and push:**
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+
+GitHub Pages will automatically rebuild and deploy the updates.
+
+## Content Management
+
+### Adding a New Page
+Create a new directory in `content/` with an `index.md` file:
+```bash
+mkdir -p content/new-page
+echo "---
+title: My New Page
+---
+Page content here." > content/new-page/index.md
+```
+
+### Adding a Blog Post
+```bash
+mkdir -p content/post/my-post
+# Create index.md in that directory
+```
+
+### Editing Homepage
+The homepage layout is defined in `content/_index.md`. It includes sections for:
+- Live camera feed
+- Weather display
+- Hero section with logo
+- Group history
+
+### Removing Draft Content
+Content marked with `draft: true` in the front matter will not be published. Remove or change to `draft: false` to publish.
+
+## Hugo CLI Reference
+
+```bash
+hugo                   # Build the production site
+hugo server            # Start development server
+hugo server -D         # Include drafts in dev server
+hugo clean             # Remove generated public folder
+hugo mod get -u        # Update theme modules
+hugo -v                # Verbose output
+```
+
+## Troubleshooting
+
+- **Build warnings about sitemap.xml**: This is a known issue with Hugo Blox and can be safely ignored. The site builds successfully despite the warning.
+- **Search not working**: Rebuild the site with `hugo` to regenerate the search index
+- **Changes not showing**: Clear cache and rebuild: `hugo mod clean && hugo`
+- **Local server not starting**: Try `hugo server --disableFastRender`
+
+## License
+
+This project is licensed under the MIT License - see LICENSE.md for details.
+
+## Questions or Issues?
+
+For issues specific to the Metro Warbirds website, please contact billthacker@gmail.com or visit the contact page at https://metrowarbirds.com/contact
