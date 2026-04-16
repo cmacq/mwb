@@ -10,7 +10,7 @@ sections:
       title: Live Runway Camera
       subtitle: ''
       text: |
-        <a href=https://myearthcam.com/11llrunway>Watch the live runway stream courtesy of EarthCam</a><br><br><img src="https://www.earthcam.com/images/site/linktous/EarthCam_webcam_technology_150.png" alt="EarthCam webcam technology">
+        <a href=https://myearthcam.com/11llrunway>Watch the live runway stream courtesy of EarthCam - you may have to watch an ad first then the live cam will display</a><br><br><img src="https://www.earthcam.com/images/site/linktous/EarthCam_webcam_technology_150.png" alt="EarthCam webcam technology">
     design:
       columns: '1'
       spacing:
