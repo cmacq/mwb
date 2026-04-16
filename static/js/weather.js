@@ -10,8 +10,9 @@ async function fetchKPNTWeather() {
       
       if (weatherDiv) {
         // Format the display
-        const metarText = metar.rawText || 'METAR data not available';
-        const time = new Date(metar.observationTime).toLocaleString();
+        const metarText = metar.rawText || metar.rawOb || 'METAR data not available';
+        const timeValue = metar.reportTime || metar.observationTime || metar.obsTime || null;
+        const time = timeValue ? new Date(timeValue).toLocaleString() : 'Unknown time';
         
         weatherDiv.innerHTML = `
           <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 10px;">
