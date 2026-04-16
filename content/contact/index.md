@@ -10,7 +10,7 @@ sections:
       title: Contact
       text: |-
         Let us know your interest in Metro Warbirds!
-      email: test@example.org
+      email: billthacker@gmail.com
       phone: 888 888 88 88
       address:
         street: 450 Serra Mall
