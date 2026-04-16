@@ -19,7 +19,7 @@ sections:
         - icon: map-marker
           icon_pack: fas
           name: Metrowarbirds HQ - 11LL
-          link: 'https://adip.faa.gov/agis/public/#/simpleAirportMap/1C5'
+          link: 'https://adip.faa.gov/agis/public/#/simpleAirportMap/11LL'
     
       # Email form provider
       form:
@@ -28,7 +28,7 @@ sections:
           id:
         netlify:
           # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
+          captcha: true
         name: contact
     design:
       columns: '1'
